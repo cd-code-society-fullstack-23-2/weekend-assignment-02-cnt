@@ -1,10 +1,11 @@
 package com.codedifferently.ListExample;
 import java.util.ArrayList;
 import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
-        List<String> names = new ArrayList<>();
+        java.util.List<String> names = new ArrayList<>();
 
 //    Adding elements to the list
         names.add("Candice"); //index 0
@@ -29,7 +30,19 @@ public class Main {
 
     }
 
+    public void addName(String jacqueline) {
+
+    }
+
+    public List<String> getNames() {
+        return getNames();
+
+    }
+
+
+
 }
+
 
 
 

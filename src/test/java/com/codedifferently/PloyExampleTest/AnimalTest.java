@@ -13,7 +13,7 @@ public class AnimalTest {
     @BeforeEach
 
     public void setUp() {
-        Animal animal = new Animal("Simba","Orange" ); }
+        Animal animal = new Animal(); }
 
     @Test
     public void testGetName(){

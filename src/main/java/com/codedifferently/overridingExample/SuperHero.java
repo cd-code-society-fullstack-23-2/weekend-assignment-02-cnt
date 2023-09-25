@@ -4,13 +4,17 @@ public class SuperHero {
     String name;
     String power;
 
+    public SuperHero(String name, String power) {
+        this.name = name;
+        this.power = power;
+    }
 
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name =  name;
     }
 
     public String getPower() {

@@ -33,7 +33,7 @@ public class MyHero {
 
     public static void main(String[] args) {
 
-        MyHero myHero = new MyHero("Flight","Strength","Lasers","LaserFace","TazorFace");
+        MyHero myHero = new MyHero("Strength","Lasers","LaserFace","TazorFace");
         //creating a new MyHero Object class with variable name of myHero
         System.out.println("powers: ");
         //prints code to terminal

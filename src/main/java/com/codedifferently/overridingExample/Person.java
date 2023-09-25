@@ -4,6 +4,12 @@ public class Person extends SuperHero{
     String name;
     String power;
 
+    public Person(String name, String power, String name1, String power1) {
+        super(name, power);
+        this.name = name1;
+        this.power = power1;
+    }
+
     public String getName() {
         return name;
     }

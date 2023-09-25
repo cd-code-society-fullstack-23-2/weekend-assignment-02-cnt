@@ -1,0 +1,176 @@
+Question: What is an interface in Java?
+
+
+Interface:  In Java, an interface is a contract or a blueprint for a set of methods that a class
+ must implement. It defines a collection of abstract methods (methods without a body) that any class
+  implementing the interface must provide concrete implementations for. Interfaces can also include
+   constants (variables with final and static modifiers). Classes can implement multiple interfaces,
+    enabling multiple inheritance of method contracts.
+
+Question: When would we want to use an interface? Why not just create the method for each class?
+
+Forcing Implementation: Any class that implements the Shape interface is required to provide an
+ implementation for the area() method. This ensures that all shapes that claim to be "Shapes" must
+  have a way to calculate their area, which helps maintain consistency and prevents classes from forgetting
+   to implement the necessary functionality.
+Standardized Method Signature: The Shape interface declares a single method, double area(). This method
+ signature serves as a standardized way to calculate the area of any shape that implements the interface.
+  It enforces a consistent method name and return type for all implementing classes.
+
+Question: How can this be visualized using a real world analogy?
+
+Analogy: All phones are phones, right? They can have different names such as android, iPhone, they can
+ have any OS they want, different design and button layouts, but they all must be able to implement the
+  method of being able to make calls which a phone should provide in order to be considered a phone. In
+   this sense, an iPhone implements the phone interface, just as an android does, as does a payphone booth.
+
+Question: What is an abstract class?
+
+Abstract Classes: An abstract class in Java is a class that cannot be instantiated on its own and is
+ typically used as a base class for other classes. It can have both abstract (unimplemented) methods and
+  concrete (implemented) methods. Abstract classes provide a common structure and behavior that subclasses
+   can inherit, while allowing the flexibility for subclasses to provide their own implementations for
+    abstract methods.
+
+Question: What would be the reason for using an abstract class and not an interface in this code?
+
+Common Implementation: The Animal abstract class provides a common implementation for the eat() method.
+ Abstract classes can include concrete (implemented) methods, which can provide a default behavior that
+  can be shared among all subclasses. In the sample code, the eat() method has a default implementation
+   that prints that the animal “occasionally eats people food”. If you used an interface, you would not be
+    able to provide this shared implementation.
+
+Question: Real world analogy of abstract classes.
+
+
+Kitchen appliances like blenders, toasters, and coffee makers all share common features like a power button
+ and a plug. However, each appliance also has its unique function, like blending, toasting, or brewing. In
+  this analogy, an abstract class would be like a blueprint for kitchen appliances, defining common attributes
+   (power button, plug) and behaviors (turn on, turn off). Concrete appliance classes (Blender, Toaster,
+    CoffeeMaker) would extend this abstract class, inheriting the common features and implementing their
+     unique functions, such as blending, toasting, or brewing. This way, you ensure consistency while
+      allowing for specialization in each appliance type.
+
+
+
+
+
+
+
+
+
+Polymorphism: Part of APIE(four fundamental principles)---Abstraction, Polymorphism, Inheritance & Encapsulation.
+What is it :Ability for an object to identify as more than one data type.
+When do you use it:Use when you want to make your code more flexible, reusable, and easier to maintain.
+ Allows for More flexible, maintainable code, simplifies code and reusability-closely related to inheritance
+  and method overriding.
+Scenarios of when you would use:Method Overriding, Interfaces, Collections etc.
+Real Life examples:
+EX:Polymorphism in Java is like having a superpower for your objects. It allows you to use different
+ classes of objects in a consistent way, just like how superheroes with different powers can all be part
+  of a superhero team.
+EX: Imagine you have a bunch of different animals, like dogs, cats, and birds, all of which can make a
+ sound. Instead of having a separate function for each animal to make a sound, you can create a common
+  "makeSound" function for all animals. This way, no matter what animal you have, you can always call
+   "makeSound," and it will do the right thing for that specific animal.
+
+
+
+
+ENUM
+What is it: Enum, short for "enumeration," is a special data type that allows you to define a set of
+ named values. Grouping of Constants that are similar to objects. Cannot change once the program compiles.
+Scenarios of when you would use: Type Safety, readability,
+When Do You Use It: When you have a fixed set of related constants that you want to represent in your code.
+Real Life Example:
+Days of the week: Monday, Tuesday, Wednesday, Thursday etc.
+T-Shirt Sizes: Small, Medium, Large.
+Months in the year, Planet
+
+
+
+
+
+
+
+
+OVERLOADING
+What is it: A feature in Java that allows you to create multiple methods with the same name, but with
+ different parameters.
+When Do You Use It: This is useful when  you want to provide different implementations of a method for
+ different types of parameters.
+Real Life Example:
+When you have a method called add(), or subtract() but you want to test two different types of values like
+ whole numbers or decimals to be added or subtracted.
+
+OVERRIDE
+What is it:   Overloading is a function that requires a subclass or child class to provide a variety of
+ method implementations that are already provided by one of its superclasses or parent classes, in any
+  object-oriented programming language.
+When Do You Use It:  An annotation type that declares a method in the  subclass,  which is already present
+ in superclass, so that a child class can give its own implementation… overrides a method of the superclass.
+Real Life Example: An automatic car will stop / break method but the subclass person driving can override
+ that method and choose to keep going. We are able to use our value of the subclass to override the one
+  given by the superclass.
+When you create a subclass (also known as a derived or child class) that inherits from a superclass (also
+ known as a base or parent class), you can override methods from the superclass in the subclass.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LIST:  You might choose different implementations of List (e.g, ArrayList, LinkedList, Stack, and  Vector.)
+
+What is it: In Java List is an interface that represents an ordered collection of elements. It extends
+ the collection interface and is part of the Java Collections Framework, a fundamental and essential part
+  of the Java Standard Library.  Lists allow you to store and manipulate a sequence of data.
+When do you use it: You use a List in Java when you may need to perform operations like adding, removing,
+ or accessing elements by their index.
+
+Some key characteristics and features of a List in Java include:
+
+Ordered Collection: A List maintains the order in which elements are added. This means you can access
+ elements in a List by their index.
+Allows Duplicates: Unlike a Set, a List allows duplicate elements. This means you can have multiple elements
+ with the same value.
+Dynamic Size: Unlike arrays a List can dynamically resize itself. You can add or remove elements as needed.
+Common Methods: Some common methods provided by the List interface include add, get, set, remove, size,
+ contains, indexOf, isEmpty, and more.
+
+Unit Test =
+What is it: Tests are small programs that run automatically over the codebase without user control and
+ use rules to show that sections of the code behave as specified. The focus of software testing is on
+  three characteristics: automatic, repeatable, and traceable.  The most popular Unit Test is JUnit5 and
+   it consists of 3 parts: JUnit Platform, JUnit Jupiter, and JUnit Vintage.
+
+Why need to write Unit Testing?
+A safety-net
+Unit Testing is mandatory when coming with CI/CD. Without such a mechanism as automated testing as a safety
+ net, who can guarantee we do not deploy a defective service?
+Documentation
+Unit Testing also can consider better internal documentation than comments. It provides sample input and
+ output, the prerequisite to call the function and dependency
+Efficiency
+Unit Testing can save a lot of time because the coder only needs to focus on a single unit without worrying
+ it will break another part of the project (Well, at least we know if something is broken). The coder can
+  jump directly to test a specific function/method rather than from the program entry-point
+   (the main() function)
+Code Quality
+The existence of Unit Testing is one sign of a good project. Unit Testing not only said that the
+ function/method is really working but in the process of writing it, it will affect and drive the entire
+  project to good design.
